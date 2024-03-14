@@ -20,7 +20,7 @@ def registrar_blog(request):
     curso = blog_crud.objects.create(
         codigo=codigo, nombre=nombre, creditos=creditos)
     messages.success(request, 'BLOG registrado!')
-    return redirect('/blog')
+    return redirect('/')
 
 
 
@@ -30,7 +30,7 @@ def eliminar_blog(request, codigo):
     curso.delete()
 
     messages.success(request, 'BLOG elimnado!')
-    return redirect('/blog')
+    return redirect('/')
 
 
 
@@ -53,4 +53,4 @@ def editar_blog(request):
 
 
     messages.success(request, 'BLOG editado!')
-    return redirect('/blog')
+    return redirect('/')
